@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="0xThomas">
+  <rect width="1200" height="630" fill="#0B0F14"/>
+  <path d="M0 470h1200" stroke="#22303D"/>
+  <path d="M0 160h1200" stroke="#22303D"/>
+  <path d="M220 0v630M980 0v630" stroke="#18232D"/>
+  <rect x="80" y="84" width="1040" height="462" rx="24" fill="#0A0D12" stroke="#22303D"/>
+  <text x="140" y="245" fill="#EEF3F7" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="650">Thomas</text>
+  <text x="146" y="318" fill="#CFD8DF" font-family="Inter, Arial, sans-serif" font-size="36">Building systems for AI, finance, and focus.</text>
+  <text x="148" y="410" fill="#37F27D" font-family="SFMono-Regular, Consolas, monospace" font-size="24">0xthomas.dev</text>
+  <circle cx="924" cy="246" r="9" fill="#37F27D"/>
+  <circle cx="834" cy="318" r="7" fill="#EEF3F7"/>
+  <circle cx="1014" cy="374" r="7" fill="#93A0AA"/>
+  <path d="M924 246 834 318 1014 374 924 246Z" fill="none" stroke="#37F27D" stroke-opacity=".55" stroke-width="2"/>
+</svg>
