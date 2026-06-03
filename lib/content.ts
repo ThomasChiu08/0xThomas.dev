@@ -100,8 +100,8 @@ export const principles = [
 ] as const;
 
 export const contactLinks = [
-  { label: "GitHub", href: "https://github.com/0xThomas" },
-  { label: "X / Twitter", href: "https://x.com/0xThomas" },
-  { label: "Email", href: "mailto:hello@0xthomas.dev" },
-  { label: "Telegram", href: "https://t.me/0xThomas" },
+  { label: "X", href: "https://x.com/Thomas_0822" },
+  { label: "GitHub", href: "https://github.com/ThomasChiu08" },
+  { label: "Email", href: "mailto:thomaschiu0822@gmail.com" },
+  { label: "Telegram", href: "https://t.me/thomas_cinematic08" },
 ] as const;

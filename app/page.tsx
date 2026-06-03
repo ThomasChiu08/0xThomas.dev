@@ -428,7 +428,7 @@ export default function Home() {
                   Open to projects, research collaborations, and meaningful
                   conversations.
                 </p>
-                <ButtonLink href="mailto:hello@0xthomas.dev">
+                <ButtonLink href="mailto:thomaschiu0822@gmail.com">
                   Start a Conversation
                 </ButtonLink>
               </div>
