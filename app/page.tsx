@@ -258,7 +258,7 @@ export default function Home() {
                 className="rule-label inline-flex items-center gap-3 text-text transition duration-200 hover:text-muted"
                 href="#contact"
               >
-                View all projects
+                Discuss projects
                 <svg
                   aria-hidden="true"
                   className="size-4"
@@ -327,7 +327,7 @@ export default function Home() {
                 className="rule-label inline-flex items-center gap-3 text-text transition duration-200 hover:text-muted"
                 href="#contact"
               >
-                Browse all notes
+                Discuss notes
                 <svg
                   aria-hidden="true"
                   className="size-4"

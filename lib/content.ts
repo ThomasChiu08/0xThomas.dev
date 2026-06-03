@@ -8,9 +8,9 @@ export const siteConfig = {
 
 export const navItems = [
   { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Notes", href: "#notes" },
-  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
