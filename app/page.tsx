@@ -168,7 +168,7 @@ export default function Home() {
           />
           <HeroIndex />
           <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-14 md:px-8 md:pt-20 lg:grid-cols-[0.92fr_1.08fr] lg:pb-16">
-            <div className="flex min-h-[34rem] flex-col justify-center lg:min-h-[43rem]">
+            <div className="flex min-h-[34rem] flex-col justify-start pt-12 md:pt-14 lg:min-h-[43rem] lg:pt-24">
               <h1
                 className="font-[var(--font-display)] text-7xl font-normal leading-none tracking-normal text-text sm:text-8xl md:text-9xl lg:text-[10rem]"
                 data-motion="hero-title"
