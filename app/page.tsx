@@ -1,5 +1,6 @@
 import { HeroSystemMap } from "@/components/hero-system-map";
 import { MotionRoot } from "@/components/motion/motion-root";
+import { ProjectCardSwitcher } from "@/components/projects/project-card-switcher";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -19,9 +20,6 @@ const identityFacts = [
   ["Timezone", "UTC"],
 ] as const;
 
-const projectCardClass =
-  "group grid min-h-[17rem] gap-8 border-b border-line/55 p-6 transition duration-200 md:grid-cols-[0.72fr_1fr] md:p-8 md:[&:nth-child(odd)]:border-r md:[&:nth-last-child(-n+2)]:border-b-0";
-
 function HeroIndex() {
   return (
     <div
@@ -35,120 +33,6 @@ function HeroIndex() {
         </div>
       ))}
     </div>
-  );
-}
-
-function ProjectFigure({ name }: { name: string }) {
-  if (name === "NotchMove") {
-    return (
-      <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
-        <path
-          d="M52 28c0-9 7-16 16-16h54c9 0 16 7 16 16v9c0 7 5 12 12 12h7c8 0 14 6 14 14v26c0 8-6 14-14 14H33c-8 0-14-6-14-14V63c0-8 6-14 14-14h7c7 0 12-5 12-12z"
-          stroke="currentColor"
-        />
-        <path d="M64 37h62" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M42 72h106" stroke="currentColor" strokeDasharray="2 5" />
-        <circle cx="56" cy="72" fill="currentColor" r="4" />
-        <circle cx="95" cy="72" r="4" stroke="currentColor" />
-        <circle cx="134" cy="72" r="4" stroke="currentColor" />
-        <path d="M68 92h54" stroke="currentColor" />
-      </svg>
-    );
-  }
-
-  if (name === "AlphaLoop") {
-    return (
-      <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
-        <path
-          d="M17 82c38-42 106-54 153-16"
-          stroke="currentColor"
-          strokeDasharray="2 5"
-          strokeWidth="1"
-        />
-        {[30, 66, 104, 139, 166].map((x, itemIndex) => (
-          <g key={x}>
-            <path d={`M${x} ${26 + itemIndex * 7}v62`} stroke="currentColor" />
-            <rect
-              fill={itemIndex === 3 ? "currentColor" : "none"}
-              height={28}
-              width={10}
-              x={x - 5}
-              y={48 - itemIndex * 4}
-              stroke="currentColor"
-            />
-          </g>
-        ))}
-      </svg>
-    );
-  }
-
-  if (name === "XTopicMonitor") {
-    return (
-      <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
-        {[0, 1, 2, 3, 4].map((row) => (
-          <path
-            d={`M20 ${24 + row * 17}c24 18 38 18 58 0s35-18 58 0 34 18 52 0`}
-            key={row}
-            stroke="currentColor"
-            strokeDasharray={row === 2 ? "0" : "2 5"}
-            strokeWidth={row === 2 ? "1.4" : "1"}
-          />
-        ))}
-        {[48, 94, 151].map((x) => (
-          <circle cx={x} cy={63} fill="currentColor" key={x} r="3" />
-        ))}
-      </svg>
-    );
-  }
-
-  if (name === "FocusBox") {
-    return (
-      <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
-        {[32, 76, 120, 164].map((x) => (
-          <path d={`M${x} 18v84`} key={x} stroke="currentColor" strokeDasharray="2 5" />
-        ))}
-        {[28, 62, 96].map((y) => (
-          <path d={`M18 ${y}h162`} key={y} stroke="currentColor" strokeDasharray="2 5" />
-        ))}
-        {[
-          [32, 28],
-          [76, 62],
-          [120, 28],
-          [164, 96],
-          [76, 96],
-          [120, 62],
-        ].map(([x, y], itemIndex) => (
-          <rect
-            fill={itemIndex === 2 ? "currentColor" : "none"}
-            height="10"
-            key={`${x}-${y}`}
-            stroke="currentColor"
-            width="10"
-            x={x - 5}
-            y={y - 5}
-          />
-        ))}
-        <path d="M32 28 76 62 120 28 164 96 76 96 120 62" stroke="currentColor" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
-      <circle cx="95" cy="60" r="12" fill="currentColor" />
-      {[0, 1, 2, 3, 4, 5, 6].map((item) => {
-        const angle = (item / 7) * Math.PI * 2;
-        const x = 95 + Math.cos(angle) * 48;
-        const y = 60 + Math.sin(angle) * 40;
-
-        return (
-          <g key={item}>
-            <path d={`M95 60 ${x} ${y}`} stroke="currentColor" strokeDasharray="2 5" />
-            <circle cx={x} cy={y} fill={item === 2 ? "currentColor" : "none"} r="5" stroke="currentColor" />
-          </g>
-        );
-      })}
-    </svg>
   );
 }
 
@@ -288,76 +172,7 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-            <div className="mt-10 grid border border-line/55 md:grid-cols-2">
-              {projects.map((project, index) => {
-                const projectCard = (
-                  <>
-                    <div>
-                      <div className="flex items-start gap-5">
-                        <p className="font-mono text-sm text-text-soft">
-                          {String(index + 1).padStart(2, "0")}
-                        </p>
-                        <div>
-                          <h3 className="text-xl font-semibold text-text">
-                            {project.name}
-                          </h3>
-                          <p className="mt-4 text-sm leading-6 text-text-soft">
-                            {project.description}
-                          </p>
-                          <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase text-muted">
-                            <span>{project.status}</span>
-                            {project.href ? (
-                              <span className="text-text transition duration-200 group-hover:text-accent-strong">
-                                Open GitHub
-                              </span>
-                            ) : null}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 font-mono text-[10px] uppercase text-muted">
-                        {project.tags.map((tag) => (
-                          <span key={tag}>{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-between gap-5">
-                      <p className="rule-label text-right text-text-soft">
-                        {project.category}
-                      </p>
-                      <div className="h-32 text-text/70 md:h-40">
-                        <ProjectFigure name={project.name} />
-                      </div>
-                    </div>
-                  </>
-                );
-
-                if (project.href) {
-                  return (
-                    <a
-                      aria-label={`Open ${project.name} on GitHub`}
-                      className={`${projectCardClass} hover:bg-surface/70`}
-                      data-motion="card"
-                      href={project.href}
-                      key={project.name}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {projectCard}
-                    </a>
-                  );
-                }
-
-                return (
-                  <article
-                    className={projectCardClass}
-                    data-motion="card"
-                    key={project.name}
-                  >
-                    {projectCard}
-                  </article>
-                );
-              })}
-            </div>
+            <ProjectCardSwitcher projects={projects} />
           </div>
         </section>
 

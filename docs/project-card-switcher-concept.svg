@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" fill="none">
+  <rect width="1600" height="980" fill="#f2f1eb"/>
+  <defs>
+    <pattern id="paper" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#0d0f0d" opacity=".05"/>
+    </pattern>
+    <style>
+      .mono{font-family:Menlo,Consolas,monospace;letter-spacing:0;text-transform:uppercase}
+      .sans{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+      .serif{font-family:Georgia,'Times New Roman',serif}
+      .text{fill:#0d0f0d}
+      .soft{fill:#2a2f2a}
+      .muted{fill:#6c716a}
+      .line{stroke:#1f231f;stroke-opacity:.55}
+    </style>
+  </defs>
+  <rect width="1600" height="980" fill="url(#paper)" opacity=".72"/>
+
+  <g transform="translate(96 72)">
+    <text class="mono text" font-size="13">/ PROJECTS</text>
+    <text class="sans muted" font-size="22" y="72">Early systems and product experiments designed to become useful,</text>
+    <text class="sans muted" font-size="22" y="104">observable, and compounding over time.</text>
+    <text class="mono text" font-size="13" x="1238" y="96">DISCUSS PROJECTS  -&gt;</text>
+  </g>
+
+  <g transform="translate(96 216)">
+    <rect width="1408" height="664" stroke="#1f231f" stroke-opacity=".55"/>
+    <line x1="0" x2="1408" y1="94" y2="94" class="line"/>
+
+    <g transform="translate(28 28)">
+      <text class="mono muted" font-size="12">CARD SET</text>
+      <text class="sans text" font-size="24" font-weight="720" x="92" y="5">3 visible / 5 total</text>
+    </g>
+
+    <g transform="translate(1132 22)">
+      <rect x="0" y="0" width="46" height="46" stroke="#1f231f" stroke-opacity=".65"/>
+      <text class="sans text" font-size="24" x="16" y="31">&lt;</text>
+      <rect x="58" y="0" width="46" height="46" fill="#0d0f0d"/>
+      <text fill="#fbfaf5" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" x="74" y="31">&gt;</text>
+      <text class="mono muted" font-size="11" x="124" y="29">NEXT SET</text>
+    </g>
+
+    <g transform="translate(40 132)">
+      <g>
+        <rect width="410" height="454" fill="#fffef8" fill-opacity=".62" stroke="#1f231f" stroke-opacity=".48"/>
+        <rect width="410" height="6" fill="#caff00"/>
+        <text class="mono muted" font-size="13" x="28" y="46">01</text>
+        <text class="mono muted" font-size="12" x="292" y="46">MACOS / HEALTH</text>
+        <text class="sans text" font-size="31" font-weight="760" x="28" y="98">NotchMove</text>
+        <text class="sans soft" font-size="18" x="28" y="146">A native macOS menu bar utility</text>
+        <text class="sans soft" font-size="18" x="28" y="174">for low-interruption movement</text>
+        <text class="sans soft" font-size="18" x="28" y="202">reminders.</text>
+        <g transform="translate(92 234)" stroke="#0d0f0d" stroke-opacity=".65">
+          <path d="M52 28c0-9 7-16 16-16h54c9 0 16 7 16 16v9c0 7 5 12 12 12h7c8 0 14 6 14 14v26c0 8-6 14-14 14H33c-8 0-14-6-14-14V63c0-8 6-14 14-14h7c7 0 12-5 12-12z"/>
+          <path d="M64 37h62" stroke-width="1.4"/>
+          <path d="M42 72h106" stroke-dasharray="2 5"/>
+          <circle cx="56" cy="72" r="4" fill="#0d0f0d"/>
+          <circle cx="95" cy="72" r="4"/>
+          <circle cx="134" cy="72" r="4"/>
+          <path d="M68 92h54"/>
+        </g>
+        <text class="mono muted" font-size="12" x="28" y="398">SHIPPING</text>
+        <text class="mono text" font-size="12" x="118" y="398">OPEN GITHUB</text>
+        <text class="mono muted" font-size="11" x="28" y="428">SWIFT  SWIFTUI  APPKIT  MACOS</text>
+      </g>
+
+      <g transform="translate(470 0)">
+        <rect width="410" height="454" fill="#fffef8" fill-opacity=".78" stroke="#1f231f" stroke-opacity=".72"/>
+        <rect width="410" height="6" fill="#0d0f0d"/>
+        <text class="mono muted" font-size="13" x="28" y="46">02</text>
+        <text class="mono muted" font-size="12" x="302" y="46">AI / SYSTEM</text>
+        <text class="sans text" font-size="31" font-weight="760" x="28" y="98">agentOS</text>
+        <text class="sans soft" font-size="18" x="28" y="146">A multi-agent operating system</text>
+        <text class="sans soft" font-size="18" x="28" y="174">framework for reliable AI</text>
+        <text class="sans soft" font-size="18" x="28" y="202">workflows.</text>
+        <g transform="translate(104 230)" stroke="#0d0f0d" stroke-opacity=".66">
+          <circle cx="95" cy="60" r="12" fill="#0d0f0d"/>
+          <g>
+            <path d="M95 60 143 60" stroke-dasharray="2 5"/>
+            <path d="M95 60 125 92" stroke-dasharray="2 5"/>
+            <path d="M95 60 72 96" stroke-dasharray="2 5"/>
+            <path d="M95 60 52 77" stroke-dasharray="2 5"/>
+            <path d="M95 60 58 40" stroke-dasharray="2 5"/>
+            <path d="M95 60 88 20" stroke-dasharray="2 5"/>
+            <path d="M95 60 126 28" stroke-dasharray="2 5"/>
+            <circle cx="143" cy="60" r="5"/>
+            <circle cx="125" cy="92" r="5"/>
+            <circle cx="72" cy="96" r="5" fill="#0d0f0d"/>
+            <circle cx="52" cy="77" r="5"/>
+            <circle cx="58" cy="40" r="5"/>
+            <circle cx="88" cy="20" r="5"/>
+            <circle cx="126" cy="28" r="5"/>
+          </g>
+        </g>
+        <text class="mono muted" font-size="12" x="28" y="398">BUILDING</text>
+        <text class="mono muted" font-size="11" x="28" y="428">TS  NEXT.JS  PYTHON  REDIS</text>
+      </g>
+
+      <g transform="translate(940 0)">
+        <rect width="410" height="454" fill="#fffef8" fill-opacity=".62" stroke="#1f231f" stroke-opacity=".48"/>
+        <rect width="410" height="6" fill="#caff00"/>
+        <text class="mono muted" font-size="13" x="28" y="46">03</text>
+        <text class="mono muted" font-size="12" x="258" y="46">FINANCE / TRADING</text>
+        <text class="sans text" font-size="31" font-weight="760" x="28" y="98">AlphaLoop</text>
+        <text class="sans soft" font-size="18" x="28" y="146">A trading decision and review</text>
+        <text class="sans soft" font-size="18" x="28" y="174">system for structured feedback</text>
+        <text class="sans soft" font-size="18" x="28" y="202">loops.</text>
+        <g transform="translate(102 236)" stroke="#0d0f0d" stroke-opacity=".66">
+          <path d="M17 82c38-42 106-54 153-16" stroke-dasharray="2 5"/>
+          <path d="M30 26v62"/>
+          <rect x="25" y="48" width="10" height="28"/>
+          <path d="M66 33v62"/>
+          <rect x="61" y="44" width="10" height="28"/>
+          <path d="M104 40v62"/>
+          <rect x="99" y="40" width="10" height="28"/>
+          <path d="M139 47v62"/>
+          <rect x="134" y="36" width="10" height="28" fill="#0d0f0d"/>
+          <path d="M166 54v62"/>
+          <rect x="161" y="32" width="10" height="28"/>
+        </g>
+        <text class="mono muted" font-size="12" x="28" y="398">RESEARCH</text>
+        <text class="mono muted" font-size="11" x="28" y="428">PYTHON  CLICKHOUSE  WEBSOCKETS</text>
+      </g>
+    </g>
+
+    <g transform="translate(40 622)">
+      <rect width="36" height="4" fill="#0d0f0d"/>
+      <rect x="48" width="36" height="4" fill="#0d0f0d" opacity=".32"/>
+      <text class="mono muted" font-size="11" x="102" y="6">PAGE 1 / 2. NEXT SHOWS XTopicMonitor, FocusBox, and wraps one anchor card.</text>
+    </g>
+  </g>
+
+  <g transform="translate(96 922)">
+    <text class="mono muted" font-size="12">MOTION: on next, cards slide left, fade/scale subtly, and a new card enters from the right. Flip can animate re-ordering if a selected card moves into the center.</text>
+  </g>
+</svg>
