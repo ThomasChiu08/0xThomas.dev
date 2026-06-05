@@ -39,11 +39,22 @@ export const identities = [
 
 export const projects = [
   {
+    name: "NotchMove",
+    description:
+      "A native macOS menu bar utility that uses low-interruption notch and fallback overlays to remind you to stand, stretch, and move during long computer sessions.",
+    status: "Shipping",
+    category: "macOS / Health",
+    href: "https://github.com/ThomasChiu08/NotchMove",
+    tags: ["SWIFT", "SWIFTUI", "APPKIT", "MACOS"],
+  },
+  {
     name: "agentOS",
     description:
       "A multi-agent operating system framework for reliable, composable, and observable AI workflows.",
     status: "Building",
     category: "AI / System",
+    href: null,
+    tags: ["TS", "NEXT.JS", "PYTHON", "REDIS"],
   },
   {
     name: "AlphaLoop",
@@ -51,6 +62,8 @@ export const projects = [
       "A trading decision and review system designed to turn market actions into structured feedback loops.",
     status: "Research",
     category: "Finance / Trading",
+    href: null,
+    tags: ["PYTHON", "CLICKHOUSE", "WEBSOCKETS"],
   },
   {
     name: "XTopicMonitor",
@@ -58,6 +71,8 @@ export const projects = [
       "A real-time topic monitoring system for markets, crypto, narratives, and social signals.",
     status: "Prototype",
     category: "Crypto / Signals",
+    href: null,
+    tags: ["NEXT.JS", "TAILWIND", "LOCAL-FIRST"],
   },
   {
     name: "FocusBox",
@@ -65,6 +80,8 @@ export const projects = [
       "A minimalist focus system combining timeboxing, AI task breakdown, and deep work rituals.",
     status: "Prototype",
     category: "Focus / System",
+    href: null,
+    tags: ["PYTHON", "AIRFLOW", "DBT", "SNOWFLAKE"],
   },
 ] as const;
 

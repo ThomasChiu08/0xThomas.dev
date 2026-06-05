@@ -12,19 +12,15 @@ import {
   projects,
 } from "@/lib/content";
 
-const projectTags = [
-  ["TS", "NEXT.JS", "PYTHON", "REDIS"],
-  ["PYTHON", "CLICKHOUSE", "WEBSOCKETS"],
-  ["NEXT.JS", "TAILWIND", "LOCAL-FIRST"],
-  ["PYTHON", "AIRFLOW", "DBT", "SNOWFLAKE"],
-] as const;
-
 const identityFacts = [
   ["Location", "Global"],
   ["Focus", "Systems"],
   ["Mode", "Build"],
   ["Timezone", "UTC"],
 ] as const;
+
+const projectCardClass =
+  "group grid min-h-[17rem] gap-8 border-b border-line/55 p-6 transition duration-200 md:grid-cols-[0.72fr_1fr] md:p-8 md:[&:nth-child(odd)]:border-r md:[&:nth-last-child(-n+2)]:border-b-0";
 
 function HeroIndex() {
   return (
@@ -42,8 +38,25 @@ function HeroIndex() {
   );
 }
 
-function ProjectFigure({ index }: { index: number }) {
-  if (index === 1) {
+function ProjectFigure({ name }: { name: string }) {
+  if (name === "NotchMove") {
+    return (
+      <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
+        <path
+          d="M52 28c0-9 7-16 16-16h54c9 0 16 7 16 16v9c0 7 5 12 12 12h7c8 0 14 6 14 14v26c0 8-6 14-14 14H33c-8 0-14-6-14-14V63c0-8 6-14 14-14h7c7 0 12-5 12-12z"
+          stroke="currentColor"
+        />
+        <path d="M64 37h62" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M42 72h106" stroke="currentColor" strokeDasharray="2 5" />
+        <circle cx="56" cy="72" fill="currentColor" r="4" />
+        <circle cx="95" cy="72" r="4" stroke="currentColor" />
+        <circle cx="134" cy="72" r="4" stroke="currentColor" />
+        <path d="M68 92h54" stroke="currentColor" />
+      </svg>
+    );
+  }
+
+  if (name === "AlphaLoop") {
     return (
       <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
         <path
@@ -69,7 +82,7 @@ function ProjectFigure({ index }: { index: number }) {
     );
   }
 
-  if (index === 2) {
+  if (name === "XTopicMonitor") {
     return (
       <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
         {[0, 1, 2, 3, 4].map((row) => (
@@ -88,7 +101,7 @@ function ProjectFigure({ index }: { index: number }) {
     );
   }
 
-  if (index === 3) {
+  if (name === "FocusBox") {
     return (
       <svg aria-hidden="true" className="size-full" fill="none" viewBox="0 0 190 120">
         {[32, 76, 120, 164].map((x) => (
@@ -276,42 +289,74 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-10 grid border border-line/55 md:grid-cols-2">
-              {projects.map((project, index) => (
-                <article
-                  className="grid min-h-[17rem] gap-8 border-b border-line/55 p-6 md:grid-cols-[0.72fr_1fr] md:p-8 md:[&:nth-child(odd)]:border-r md:[&:nth-last-child(-n+2)]:border-b-0"
-                  data-motion="card"
-                  key={project.name}
-                >
-                  <div>
-                    <div className="flex items-start gap-5">
-                      <p className="font-mono text-sm text-text-soft">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      <div>
-                        <h3 className="text-xl font-semibold text-text">
-                          {project.name}
-                        </h3>
-                        <p className="mt-4 text-sm leading-6 text-text-soft">
-                          {project.description}
+              {projects.map((project, index) => {
+                const projectCard = (
+                  <>
+                    <div>
+                      <div className="flex items-start gap-5">
+                        <p className="font-mono text-sm text-text-soft">
+                          {String(index + 1).padStart(2, "0")}
                         </p>
+                        <div>
+                          <h3 className="text-xl font-semibold text-text">
+                            {project.name}
+                          </h3>
+                          <p className="mt-4 text-sm leading-6 text-text-soft">
+                            {project.description}
+                          </p>
+                          <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase text-muted">
+                            <span>{project.status}</span>
+                            {project.href ? (
+                              <span className="text-text transition duration-200 group-hover:text-accent-strong">
+                                Open GitHub
+                              </span>
+                            ) : null}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 font-mono text-[10px] uppercase text-muted">
+                        {project.tags.map((tag) => (
+                          <span key={tag}>{tag}</span>
+                        ))}
                       </div>
                     </div>
-                    <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 font-mono text-[10px] uppercase text-muted">
-                      {projectTags[index].map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
+                    <div className="flex flex-col justify-between gap-5">
+                      <p className="rule-label text-right text-text-soft">
+                        {project.category}
+                      </p>
+                      <div className="h-32 text-text/70 md:h-40">
+                        <ProjectFigure name={project.name} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex flex-col justify-between gap-5">
-                    <p className="rule-label text-right text-text-soft">
-                      {project.category}
-                    </p>
-                    <div className="h-32 text-text/70 md:h-40">
-                      <ProjectFigure index={index} />
-                    </div>
-                  </div>
-                </article>
-              ))}
+                  </>
+                );
+
+                if (project.href) {
+                  return (
+                    <a
+                      aria-label={`Open ${project.name} on GitHub`}
+                      className={`${projectCardClass} hover:bg-surface/70`}
+                      data-motion="card"
+                      href={project.href}
+                      key={project.name}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {projectCard}
+                    </a>
+                  );
+                }
+
+                return (
+                  <article
+                    className={projectCardClass}
+                    data-motion="card"
+                    key={project.name}
+                  >
+                    {projectCard}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
